@@ -1,0 +1,35 @@
+url:			string
+reached:		true/false
+secure:			true/false
+
+nInputTested:		numbers
+nXssSuccessful:		numbers
+
+inputs{
+[0] 	ln:		numbers / string (linea attaccata)
+	test:{
+	[0] success	true/false
+	[1]
+	[2]
+	[3]
+	[4]
+	}
+
+[1] 	ln:
+	test:{
+	[0]
+	[1]
+	[2]
+	[3]
+	[4]
+	}
+
+[2]	ln:
+	test:{
+	[0]
+	[1]
+	[2]
+	[3]
+	[4]
+	}
+}

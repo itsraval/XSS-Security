@@ -1,0 +1,131 @@
+:root {
+    --blue: #1a75ff;
+    --blueL: #1aa7ff;
+    --grey: #808080;
+
+    --blueDark: #2b79ee;
+    --greyDark: #696969;
+    --backDark: #393939;
+}
+
+html, body{
+    width: 100%;
+    margin: 0px;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+h1{
+    margin-top: 0px;
+    padding-top: 0.67em;
+    font-size: 6vmin;
+    background-color: var(--blue);
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+a{
+    color: var(--blue);
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+article{
+    height: auto;
+    width: 50%;
+    margin-left: 25%;
+    text-align: justify;
+    font-size: 18px;
+    color: black;
+    margin-bottom: 50px;
+}
+
+section{
+    margin-left: 30px;
+    font-family: monospace;
+    font-size: 15px;
+}
+
+h2{
+    font-size: 30px;
+    color: var(--blue);
+}
+
+h3{
+    font-size: 25px;
+    margin-bottom: 15px;
+    color: var(--blue);
+}
+
+code{
+    font-size: 15px;
+    font-family: monospace;
+}
+
+footer{
+    width: 100%;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.footer-link{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+    h1{
+        font-size: 50px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    article{
+        width: 75%;
+        margin-left: 12.5%;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: var(--backDark);
+    }
+    
+    h1{
+        background-color: var(--blueDark);
+        color: white;
+    }
+    
+    article{
+        color: white;
+    }
+
+    h2{
+        color: var(--blueDark);
+    }
+
+    h3{
+        color: var(--blueDark);
+    }
+
+    footer{
+        color: white;
+    }
+
+    .footer-link{
+        color: var(--blueDark);
+    }
+}

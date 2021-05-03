@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="icon" rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="stylesheets/style-home.css">
+    <link rel="stylesheet" href="stylesheets/style-reportPage.css">
+    <link rel="stylesheet" href="stylesheets/loader.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <script src="javascripts/index-graphics.js"></script>
+    <script src="javascripts/post-request.js"></script>
+    <script src="javascripts/reportPage-creation.js"></script>
+    <script src="javascripts/reportPage-functions.js"></script>
+    <title>XSS Security - Home</title>
+</head>
+<body onload="getCookie();">
+    <header>
+        <h1><a href="/">XSS Security</a></h1>
+    </header>
+
+    <main>
+      <div id="container-top">
+        <div id="container-selection">
+          <div class="button">
+            <a href="#" onclick="inputLINK();">
+              <div id="link" class="buttonOnFocus">
+                LINK
+              </div>
+            </a>
+          </div> 
+
+          <div class="button">
+            <a href="#" onclick="inputFILE()">
+              <div id="file">
+                FILE
+              </div>
+            </a>
+          </div>  
+        </div>
+
+        <div id="container-tooltip">
+          <img id="tooltip-img" src="images/info.svg" alt="info" >
+          <span id="tooltip-text">FILE FORMAT:<br>Only .txt file are accepted.<br>Every link must be separated by space or enter, no comma or semicolon.</span>
+        </div>
+      </div>
+      
+      <div id="container-input">
+        <input id="input-url" type="url" placeholder="https://www.example.com">
+
+        <div id="container-file-upload" ondragenter="dragIn(event);" ondragover="fileOver(event);" ondragleave="fileNotOver();" ondrop="fileDropped(event);">
+          <div id="container-file-upload-in" onclick="chooseFile()">
+            <img id="file-input-img" src="images/upload.svg" alt="upload image" >
+            <p id="file-text"><a href="#"><b>Choose&nbsp;a&nbsp;file</b></a> or drag&nbsp;it&nbsp;here</p>
+            <input id="file-input" type="file" accept=".txt" onchange="fileLoad(event);">
+          </div>
+        </div>
+      </div>
+
+      <div id="container-checkbox">
+        <input id="input-checkbox" type="checkbox" onclick="removeBackRed();">
+        <label for="input-checkbox">I have read and I agree the Terms of Service in the INFO page.</label>
+      </div>
+    
+
+      <div id="container-submit">
+        <a href="#" onclick="submit();">
+          <div>
+            Submit
+          </div>
+        </a>
+      </div>
+    </main>
+
+    <div class="container-info">
+      <div>
+        <img class="info-button" src="images/keyright.svg" alt="key rigth" onclick="comprimeRightLeft(event);">
+        <img class="info-button" src="images/keyleft.svg" alt="key left" onclick="expandRightLeft(event);">
+        <a href="/info" target="_blank">Get Info</a>
+      </div>
+    </div>
+
+    <footer>
+      <p>
+        Open source project avaible on <a class="footer-link" href="https://github.com/itsraval/XSS-Security" target="_blank"><b>GitHub</b></a><br>
+        Made by <a class="footer-link" href="https://alessandro.ravizzotti.tk/" target="_blank"><b>Alessandro Ravizzotti</b></a> &#169; 2021
+      </p>
+    </footer>
+</body>
+</html>
+<!--Open source project avaible on GitHub
+Made by Alessandro Ravizzotti © 2021-->

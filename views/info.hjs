@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="icon" rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="stylesheets/style-info.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <title>XSS Security - Info</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">XSS Security</a></h1>
+    </header>
+
+    <main>
+
+      <article> 
+        <h2>Terms of Service</h2>
+        If you scan one or more webpage you take all responsibility of your actions.
+        <br>You must be authorized by the owner of the site (or by another authorized person) to scan those targets.
+
+        <br><b>IMPORTANT:</b> If the website you scan is vulnerable from stored (or persistent)
+        XSS attack then it is possible that the scan compromises the behaviour of the website.
+      </article>
+
+      <article> 
+        <h2>What is XSS?</h2>
+        Cross-site scripting (XSS) is a security bug that can be found on websites.
+        This bug allows an attacker to add his/her malicious code into the HTML pages
+        displayed to users. Once executed by the victim's browser, just by entering the site,
+        this code steals private data or performs actions on behalf of the user.
+      </article>
+  
+      <article id="minimizeVulnerability"> 
+        <h2>Minimize the vulnerability!</h2>
+        <h3>Character Escaping</h3>
+        You can minimize the chance to have this vulnerability on your webpage with
+        character escaping.
+        You need to replace any possible harmful input to prevent the browser from
+        running malicious code:
+        <section>
+          <br>&lt;&nbsp;&nbsp;&nbsp;-->&nbsp;&nbsp;&nbsp;&amp;lt;
+          <br>&gt;&nbsp;&nbsp;&nbsp;-->&nbsp;&nbsp;&nbsp;&amp;gt;
+          <br>&amp;&nbsp;&nbsp;&nbsp;-->&nbsp;&nbsp;&nbsp;&amp;amp;
+          <br>&quot;&nbsp;&nbsp;&nbsp;-->&nbsp;&nbsp;&nbsp;&amp;quot;
+          <br>&#x27;&nbsp;&nbsp;&nbsp;-->&nbsp;&nbsp;&nbsp;&amp;#x27;
+        </section>
+        
+        <h3>document.InnerText</h3>
+        Another way you can mitigate your website vulnerability is using document.InnerText
+        instead of document.InnerHTML when you have to put in your page some text that has
+        been entered by the user. 
+        document.innerHTML interprets the text as HTML and therefore attacks can be carried out.
+        On the other side, document.innerTet does not interpret script and style so is more secure.
+      </article>
+
+      <article>
+        <h2>XSS Tested</h2>
+        Every test will use 5 different scripts. <br>
+        The codes below are the ones used by the XSS Security website. Each code tries to bypass a different type of inspection on the inputs.
+        For security purpose the content of every script is been replace with alert(0).
+        <p>
+          Code 1:&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;script&gt;alert(0)&lt;/script&gt;</code>
+        </p>
+
+        <p>
+          Code 2:&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;&lt;a&gt;script&gt;alert(0)&lt;/&lt;a&gt;script&gt;</code>
+        </p>
+
+        <p>
+          Code 3:&nbsp;&nbsp;&nbsp;&nbsp;<code>';alert(0)//';alert(0)//&quot;;alert(0)//\&quot;;alert(0)//--&gt;&lt;/SCRIPT&gt;&quot;&gt;'&gt;&lt;SCRIPT&gt;alert(0)&lt;/SCRIPT&gt;=&{}</code>
+        </p>
+
+        <p>
+          Code 4:&nbsp;&nbsp;&nbsp;&nbsp;<code>&lt;img src=x onerror=alert(0)&gt;</code>
+        </p>
+
+        <p>
+          Code 5:&nbsp;&nbsp;&nbsp;&nbsp;<code>&gt;'&gt;&quot;&gt;&lt;img src=x onerror=alert(0)&gt;</code>
+        </p>        
+      </article>
+
+      <article>
+        <h2>Test States</h2>
+        These below are the states of the pages and their inputs tested.
+        <p><b>Secure:</b> Every XSS tested was unsuccessful. This does <b>NOT</b> mean that the webpage is completely safe from every XSS attack.</p>
+        <p><b>Not Secure:</b> One or more tests were successful. We recommend you increase controls and security of your website. Try to look at the paragraph above: <a href="#minimizeVulnerability">Minimize&nbsp;the&nbsp;vulnerability!</a></p>
+        <p><b>Not Url:</b> The link you submitted is incorrect or in the wrong format.</p>
+        <p><b>Not Reached:</b> We could not reach the website you submitted.</p>
+        <p><b>Recaptcha:</b> We could not perform XSS attack because the website you submitted uses google recaptcha.</p>
+      </article>
+
+    </main>
+  
+    <footer>
+      <p>
+        Open source project avaible on <a class="footer-link" href="https://github.com/itsraval/XSS-Security" target="_blank"><b>GitHub</b></a><br>
+        Made by <a class="footer-link" href="https://alessandro.ravizzotti.tk/" target="_blank"><b>Alessandro Ravizzotti</b></a> &#169; 2021
+      </p>
+    </footer>
+</body>
+</html>
+<!--Open source project avaible on GitHub
+Made by Alessandro Ravizzotti © 2021-->

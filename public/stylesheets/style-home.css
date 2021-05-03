@@ -1,0 +1,455 @@
+:root {
+    --blue: #1a75ff;
+    --blueL: #1aa7ff;
+    --grey: #808080;
+    --yellow: #ffd11a;
+    --green: green;
+    --red: red;
+
+    --blueDark: #2b79ee;
+    --greyDark: #696969;
+    --backDark: #393939;
+}
+
+html, body{
+    width: 100%;
+    margin: 0px;
+    overflow-x: hidden;
+    text-align: center;
+    font-family: 'Montserrat';
+}
+
+h1{
+    margin-top: 0px;
+    padding-top: 0.67em;
+    font-size: 6vmin;
+    background-color: var(--blue);
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+h1 a{
+    text-decoration: none;
+    color: white;
+}
+
+h1 a:hover{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#container-top{
+    height: 60px;
+    width: 45%;
+    margin-top: 5%;
+    margin-left: 30%;
+    display: flex;
+}
+
+#container-selection{
+    width: 88.9%;
+    display: flex;
+    border-radius: 5px;
+    border: 4px solid var(--blue);
+    box-sizing: border-box;
+    box-shadow: 5px 5px var(--grey); 
+}
+
+.button{
+    height: 100%;
+    width: 50%;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.buttonOnFocus{
+    background-color: var(--blue);
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+.buttonOffFocus{
+    background-color: white;
+    color: var(--blue);
+    text-shadow: none;
+}
+
+a div{
+    padding-top:3px;
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue);
+}
+
+a:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+#container-input{
+    height: 500px;
+    width: 70%;
+    margin-top: 2%;
+    margin-left: 15%;
+}
+
+#input-url{
+    height: auto;
+    width: 100%;
+    margin-top: 10%;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border: 5px solid var(--blue);
+    border-radius: 5px;
+    font-size: 45px;
+    font-family: 'Montserrat';
+    outline: none;
+    box-shadow: 5px 5px var(--grey);
+}
+
+#input-url:focus{
+    border: 5px solid var(--blueL);
+}
+
+#container-file-upload{
+    display: none;
+    height: 95%;
+    width: 70%;
+    margin-left: 15%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: var(--blue);
+    box-shadow: 5px 5px var(--grey);
+}
+
+#container-file-upload-in{
+    position: relative;
+    top: 5px;
+    height: calc(100% - 10px);
+    width: calc(100% - 10px);
+    margin: 5px 5px;
+    text-align: center;
+    cursor: pointer;
+    box-sizing: border-box;
+    border: 5px dashed white;
+    border-radius: 5px;
+    background-color: var(--blue);
+}
+
+#container-file-upload-in img{
+    height: 40%;
+    width: 40%;
+    margin: 50px;
+    margin-bottom: 30px;
+}
+
+#container-file-upload-in p{
+    font-size: 25px;
+}
+
+#file-text{
+    color: white;
+}
+
+#file-text a{
+    color: white;
+}
+
+#file-input{
+    display: none;
+}
+
+#container-checkbox{
+    display: inline-block;
+    width: auto;
+    margin-top: 5px;
+    margin-bottom: 2.5%;
+}
+
+#input-checkbox{
+    height: 20px;
+    width: 20px;
+    margin-bottom: 10px;
+    vertical-align: middle;
+}
+
+#container-checkbox label{
+    margin: 0px;
+    font-size: 18px;
+    color: black;
+}
+
+.checkbox-notChecked{
+    background-color: rgba(255, 49, 26, 0.55);
+    text-decoration: underline;
+}
+
+#container-submit{
+    height: 50px;
+    width: 20%;
+    margin-left: 40%;
+    background-color: var(--blue);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 35px; 
+    box-shadow: 5px 5px var(--grey);
+}
+
+#container-submit a{
+    cursor: pointer;
+    color: white;
+    text-shadow: 2px 2px black;
+}
+
+#container-tooltip{
+    display: none;
+    margin-left: 5%;
+    margin-top: 18px;
+    width: 24px;
+    height: 24px;
+}
+
+#container-tooltip:hover #tooltip-text{
+    visibility: visible;
+}
+
+#tooltip-img{
+    width: 24px;
+    height: 24px;
+} 
+
+#tooltip-text{
+    visibility: hidden;
+    width: 250px;
+    background-color: var(--greyDark);
+    color: white;
+    border-radius: 6px;
+    padding: 5px 0;
+  
+    /* Position the tooltip */
+    position: absolute;
+    z-index: 1;
+    margin-top: 30px;
+    margin-left: -125px;
+    font-size: 14px;
+}
+
+.container-info{
+    position: absolute;
+    right: 0;
+    top: 20%;
+    height: 80px;
+    width: 200px;
+    text-align: left;
+    background-color: var(--blue);
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    transition: .7s;
+}
+
+.container-info div{
+    display: flex;  
+    height: 90%;
+    width: 100%;
+    margin-top: 2%;
+    margin-left: 2%;
+    box-sizing: border-box;
+    border: 2px solid white;
+    border-radius: 5px;
+}
+
+.info-button{
+    margin-top: 5px;
+    width: 60px;
+    height: 60px;
+}
+
+.info-button:hover{
+    cursor: pointer;
+}
+
+.container-info div a{
+    color: white;
+    font-size: 30px;
+    margin-top: 15px;
+}
+
+#comprimeRight{
+    right: -140px;
+    transition: .7s;
+}
+
+#invisible{
+    display: none;
+}
+
+footer{
+    width: 100%;
+    margin-top: 35px;
+    font-size: 20px;
+}
+
+.footer-link{
+    color: var(--blue);
+    text-decoration: none;
+}
+
+.footer-link:hover{
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 1100px) {
+    h1{
+        font-size: 50px;
+    }
+    
+    #container-file-upload{
+        width: 100%;
+        margin-left: 0%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    #input-url{
+        font-size: 35px;
+        margin-top: 25%;
+    }
+
+    #container-submit{
+        width: 30%;
+        margin-left: 35%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    #input-url{
+        font-size: 25px;
+        margin-top: 35%;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    #container-top{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    #container-selection{
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    #tooltip-text{
+        margin-top: 30px;
+        margin-left: -250px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #input-url{
+        font-size: 15px;
+        margin-top: 50%;
+    }
+
+    #container-submit{
+        width: 40%;
+        margin-top: 5%;
+        margin-left: 30%;
+    }
+}
+
+
+@media (prefers-color-scheme: dark) {
+    body{
+        background-color: var(--backDark);
+    }
+    
+    h1{
+        background-color: var(--blueDark);
+        color: white;
+    }
+    
+    #container-selection{
+        border: 4px solid var(--blueDark);
+        box-shadow: 5px 5px var(--greyDark); 
+    }
+
+
+    .buttonOnFocus{
+        background-color: var(--blueDark);
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+    
+    .buttonOffFocus{
+        background-color: var(--backDark);
+        color: var(--blue);
+        text-shadow: none;
+    }
+    
+    a{
+        color: var(--blueDark);
+    }
+
+    #input-url{
+        border: 5px solid var(--blueDark);
+        box-shadow: 5px 5px var(--greyDark);
+    }
+
+    #input-url:focus{
+        border: 5px solid var(--blueL);
+    }
+
+    #container-file-upload{
+        background-color: var(--blueDark);
+        box-shadow: 5px 5px var(--greyDark);
+    }
+
+    #container-file-upload-in{
+        border: 5px dashed white;
+        background-color: var(--blueDark);
+    }
+
+    #file-text{
+        color: white;
+    }
+    
+    #file-text a{
+        color: white;
+    }
+
+    #container-checkbox label{
+        color: white;
+    }
+
+    #container-submit{
+        background-color: var(--blueDark);
+        box-shadow: 5px 5px var(--greyDark);
+    }
+
+    #tooltip-img{
+        content:url("../images/info-darkMode.svg");
+    }
+
+    #container-submit a{
+        color: white;
+        text-shadow: 2px 2px black;
+    }
+
+    .container-info{
+        background-color: var(--blueDark);
+    }
+    
+    footer{
+        color: white;
+    }
+
+    .footer-link{
+        color: var(--blueDark);
+    }
+}

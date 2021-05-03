@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="icon" rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="stylesheet" href="stylesheets/style-error.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap">
+    <title>XSS Security - {{ error.status }}</title>
+</head>
+<body>
+    <header>
+        <h1><a href="/">XSS Security</a></h1>
+    </header>
+
+    <div id="container">
+        <h2>Error: {{ error.status }}</h2>
+        <h2>{{ message }} :(</h2>
+    </div>
+</body>
+</html>
