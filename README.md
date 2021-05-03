@@ -4,7 +4,18 @@
 summary
 
 # Features
+* Search for and scan a website to check if it contains XSS vulnerability
+* Support input text or input file
+* Drag and Drop input file
+*
+*
 
+* Responsive layout
+* Mobile friendly
+* Automatic dark mode (based on device settings)
+*
+*
+* 
 
 Current features
 Search train solutions between two destinations at a certain date and time
@@ -24,10 +35,10 @@ Cleaned up the code a bit
 Removed useless files from the repo (node_modules)
 
 # Dependencies/Modules Used (Server-side)
-Node.js - Javascript runtime
-Express - Web Framework 
-Puppeteer - Provides API to control Chromium over the DevTools Protocol
-wkhtmltopdf - Commnad line tools to render HTML into PDF
+* [Node.js](https://nodejs.org/en/) - Javascript runtime
+* [Express](https://expressjs.com/) - Web Framework
+* [Puppeteer](https://www.npmjs.com/package/puppeteer) - Provides API to control Chromium over the DevTools Protocol
+* [wkhtmltopdf](https://wkhtmltopdf.org/) - Commnad line tools to render HTML into PDF
 
 # XSS Security License 
 * MIT License
