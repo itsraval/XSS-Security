@@ -4,10 +4,6 @@
 This project
 
 
-Trenode.js is a project I'm working on to give me and my friend an easy way to check italian trains schedule and real time train tracking through Trenitalia API. This is my first Javascript/Node project so I'm sure there is a lot of spaghetti code.
-Feel free to contribute!
-Here is the work-in-progress website:
-
 # Features
 * Search for and scan a website to check if it contains XSS vulnerability
 * Support input text or input file (.txt only)
