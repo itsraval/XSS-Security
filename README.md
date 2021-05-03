@@ -5,34 +5,13 @@ summary
 
 # Features
 * Search for and scan a website to check if it contains XSS vulnerability
-* Support input text or input file
-* Drag and Drop input file
-*
-*
-
+* Support input text or input file (.txt only)
+* Drag and Drop input file (.txt only)
+* Convert report to PDF
+* Download report (.PDF)
 * Responsive layout
 * Mobile friendly
 * Automatic dark mode (based on device settings)
-*
-*
-* 
-
-Current features
-Search train solutions between two destinations at a certain date and time
-Choosing a solution allows to check the trains status, including trains numbers, platforms and delays
-Autocompleting date, time(to current ones) and station names in the form
-Fully responsive layout
-Mobile friendly
-Automatic dark mode
-What's new in version 2.0
-Solutions with more than a train now render properly
-Status train's page now automatically refreshes every minute
-Almost completely code rewrite with promises (await and async too)
-Updated layout of all the pages, now fully HTML5 compliant
-Added dark mode
-Removed deprecated package for api requests. Now using Axios
-Cleaned up the code a bit
-Removed useless files from the repo (node_modules)
 
 # Dependencies/Modules Used (Server-side)
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
