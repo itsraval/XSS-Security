@@ -18,7 +18,7 @@ This project aims to scan a website (or a list of web pages) and search for poss
 * [Node.js](https://nodejs.org/en/) - Javascript runtime
 * [Express](https://expressjs.com/) - Web Framework
 * [Puppeteer](https://www.npmjs.com/package/puppeteer) - Provides API to control Chromium over the DevTools Protocol
-* [wkhtmltopdf](https://wkhtmltopdf.org/) - Commnad line tools to render HTML into PDF
+* [wkhtmltopdf](https://wkhtmltopdf.org/) - Command line tools to render HTML into PDF
 
 # XSS Security Licenses 
 * MIT License
