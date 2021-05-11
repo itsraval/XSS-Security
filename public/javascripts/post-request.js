@@ -77,7 +77,6 @@ function checkUrl(url){
 // make the XMLHttpRequest
 function postRequest(url){
     var xhttp = new XMLHttpRequest();
-
     loaderCount++;
 
     // what do i do whene i get a response

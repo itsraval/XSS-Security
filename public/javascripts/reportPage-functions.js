@@ -122,9 +122,6 @@ function requestPDF(text){
 
 // create anchor element and download the pdf
 function downloadElement(filename, pdfURL){
-    console.log(filename)
-    console.log(pdfURL)
-
     var element = document.createElement('a');
     element.setAttribute('href', pdfURL);
     element.setAttribute('download', filename);
@@ -133,6 +130,3 @@ function downloadElement(filename, pdfURL){
     element.click();
     document.body.removeChild(element);
 }
-
-// infoBox mobile
-// caricare pagina su github

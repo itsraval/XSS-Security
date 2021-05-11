@@ -65,7 +65,6 @@ async function xssGetAllAttack(params, nameAll, browser, index){
     await browser.close();  
     p.setReRe(params, d);
     params.testAll[index] = d.test;
-    
 }
 
 // perform attack post with all scripts together
