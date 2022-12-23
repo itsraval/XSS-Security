@@ -1,4 +1,4 @@
-<img src="https://github.com/itsraval/XSS-Security/blob/main/public/images/favicon.png?" width="200" height="200">
+<img align="right" src="https://github.com/itsraval/XSS-Security/blob/main/public/images/favicon.png?" width="200" height="200">
 
 # XSS-Security
 This project aims to scan a website (or a list of web pages) and search for possible XSS vulnerabilities. Once the tests are finished, a downloadable report is generated with all the specifics of the attacks. If a scanned site is vulnerable to testing, the INFO page specifies methods to try to fix those problems.
